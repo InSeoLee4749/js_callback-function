@@ -58,7 +58,8 @@
 
         $(document).ready(function () {
             $("#intro button").click(function () {
-                $("body").addClass("red");
+                $("body").removeClass().addClass($(this).data('color'));
+                $("#intro button").removeClass("active")
                 $(this).addClass("active");
             })
         })
@@ -71,9 +72,9 @@
 
     <section id="intro">
         <div id="btns">
-            <button>red</button>
-            <button>blue</button>
-            <button>green</button>
+            <button data-color="red">red</button>
+            <button data-color="green">green</button>
+            <button data-color="yellow">yellow</button>
         </div>
     </section>
 
