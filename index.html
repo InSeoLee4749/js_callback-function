@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/my.css">
+    <!-- 
+    // $(document).ready(function () {
+    // let num = "";
+    // num = $("input#gu").val(""); //val값 초기화
+
+    // $("input#gu").change(function () { //input에 타이핑할때마다
+    // num = $("input#gu").val(); //값을 가져와, num에 그 값을 저장해라
+    // })
+    // //imput, checkbox 등과 같은 것만이 change 이벤트를 사용 가능!! val를 가지는 객체만 change이벤트를 가질 수 있음.
+    // //폼태그 같은 것들
+
+    // $("button").click(function () {
+    // $("#guguDiv").html(num);
+    // })
+
+    // }) -->
+    <script>
+
+        // 1번 문제
+        // $(document).ready(function () {
+        //     let bgColor = '';
+        //     $("button").click(function () {
+        //         //버튼을 클릭하면 배경색을 바꿔줘
+        //         //배경색은 input에 넣은 것
+        //         //그것은 내가 쓴 것
+        //         bgChang("#div1");
+        //     })
+
+        //     function bgChang(t) {
+        //         //아이디 gu의 값을 bgcolor에 저장
+        //         bgColor = $("#gu").val();
+        //         $(t).css("background", bgColor);
+        //         //t라는 객체의 배경색으로 처리하라
+        //     }
+        // })
+
+        // 2번 문제
+        // $(document).ready(function () {
+        //     $("button").click(function () {
+        //         bgchang("red")
+        //     })
+
+        //     function bodybg(x) {
+        //         $("body").css("background", x)
+        //     }
+        // })
+
+        $(document).ready(function () {
+            $("#intro button").click(function () {
+                $("body").css("background", "red")
+                $("#intro button").css("color", "red").css("background", "yellow")
+            })
+        })
+
+    </script>
+
+</head>
+
+<body>
+
+    <section id="intro">
+        <div id="btns">
+            <button class="red">red</button>
+            <button class="blue">blue</button>
+            <button class="green">green</button>
+        </div>
+    </section>
+
+
+
+
+</body>
+
+</html>
