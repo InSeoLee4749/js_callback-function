@@ -56,25 +56,33 @@
         //     }
         // })
 
-        $(document).ready(function () {
-            $("#intro button").click(function () {
-                $("body").removeClass().addClass($(this).data('color'));
-                $("#intro button").removeClass("active")
-                $(this).addClass("active");
+        $(document).ready(function () {  //선택자와 이벤트가 지정된 종속적함수 선언
+            let count = 1;  //초기값 let 선언
+            $("#intro button").click(function () { //#intro button을 클릭했을때 실행되라
+                $("body").removeClass().addClass($(this).data('color')); //body의 class을 다 지워라. data-color 클래스를 추가하라. this=button
+                $("#intro button").removeClass("active")  //intro button의 active 클래스를 지워라. 한놈만 주기 위해서 전체에 준 것을 삭제
+                $(this).addClass("active");  //active 클래스를 추가하라. this=intro button
             })
+
+            setInterval(function () {  //반복실행함수
+                count++;  //증가한다
+                count %= $("#intro button").length;  //intro button의 마지막까지
+                $("#intro button").eq(count).click();  //
+            }, 3000)  //1초마다
         })
 
     </script>
 
 </head>
 
-<body>
+<body class="green">
 
     <section id="intro">
         <div id="btns">
             <button data-color="red">red</button>
-            <button data-color="green">green</button>
+            <button data-color="green" class="active">green</button>
             <button data-color="yellow">yellow</button>
+            <!-- 태그에 data 옵션을 활용하여 프로세스를 간단화하였다. -->
         </div>
     </section>
 
